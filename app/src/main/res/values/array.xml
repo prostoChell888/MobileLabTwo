@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="names_of_characters">
+        <item>Rick Sanchez</item>
+        <item>Morty Smith</item>
+        <item>Summer Smith</item>
+        <item>Beth Smith</item>
+        <item>Jerry Smith</item>
+        <item>Abadango Princess</item>
+        <item>Abradolf Lincler</item>
+        <item>Adjudicator Rick</item>
+        <item>Agency Director</item>
+        <item>Alan Rails</item>
+        <item>Albert Einstein</item>
+    </string-array>
+</resources>
