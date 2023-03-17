@@ -16,12 +16,12 @@
         android:layout_height="wrap_content"
         android:text="@string/date_of_realese"
         android:layout_gravity="center"
-        android:padding="5dp"
+        android:padding="@dimen/header_of_column"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="@dimen/start_indentation"
         android:layout_marginTop="@dimen/upper_indentation"
 
         android:layout_weight="3"
@@ -30,10 +30,10 @@
         android:textSize="@dimen/standart_size_os_text"
         android:textStyle="bold|italic"
         android:textColor="#00afc8"
-        android:shadowDy="4"
-        android:shadowRadius="10"
+        android:shadowDy="@dimen/shadow_dy"
+        android:shadowRadius="@dimen/shadow_radius"
         android:shadowColor="#6fe555"
-        android:letterSpacing="0.15"/>
+        android:letterSpacing="@dimen/letter_spacing"/>
 
     <TextView
         android:id="@+id/name_of_episode"
@@ -41,9 +41,9 @@
         android:layout_height="wrap_content"
 
         android:layout_gravity="center"
-        android:padding="5dp"
+        android:padding="@dimen/pading_of_center_heder"
 
-        android:layout_marginTop="5.3dp"
+        android:layout_marginTop="@dimen/upper_indentation"
         android:text="@string/title"
         app:layout_constraintEnd_toStartOf="@+id/date_of_relise"
 
@@ -55,11 +55,11 @@
         android:typeface="monospace"
         android:textSize="@dimen/standart_size_os_text"
         android:textStyle="bold|italic"
-        android:textColor="#00afc8"
-        android:shadowDy="4"
+        android:textColor="@color/bluer"
+        android:shadowDy="@dimen/shadow_dy"
         android:shadowRadius="10"
-        android:shadowColor="#6fe555"
-        android:letterSpacing="0.15"/>
+        android:shadowColor="@color/green"
+        android:letterSpacing="@dimen/letter_spacing"/>
 
     <TextView
         android:id="@+id/date_of_relise"
@@ -68,9 +68,9 @@
         android:layout_marginTop="@dimen/upper_indentation"
 
         android:layout_gravity="center"
-        android:padding="3dp"
+        android:padding="@dimen/padding_of_end_content"
 
-        android:layout_marginEnd="1dp"
+        android:layout_marginEnd="@dimen/margine_end_of_end_column"
         android:layout_weight="1.7"
 
         android:text="@string/episode"
@@ -81,10 +81,10 @@
         android:typeface="monospace"
         android:textSize="@dimen/standart_size_os_text"
         android:textStyle="bold|italic"
-        android:textColor="#00afc8"
-        android:shadowDy="4"
-        android:shadowRadius="10"
-        android:shadowColor="#6fe555"
+        android:textColor="@color/bluer"
+        android:shadowDy="@dimen/shadow_dy"
+        android:shadowRadius="@dimen/shadow_radius"
+        android:shadowColor="@color/green"
         android:textAllCaps="true"
 
         />

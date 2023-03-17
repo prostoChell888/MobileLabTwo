@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/black">
@@ -20,24 +19,24 @@
     <TextView
         android:id="@+id/name_of_character"
         android:layout_width="wrap_content"
-        android:layout_height="90dp"
-        android:layout_marginStart="16dp"
+        android:layout_height="@dimen/picture_size"
+        android:layout_marginStart="@dimen/start_indentation"
         android:ellipsize="end"
         android:gravity="center"
-        android:text="имя неизвестно"
+        android:text="@string/unnown_name"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/photo_of_character"
         app:layout_constraintTop_toTopOf="@id/photo_of_character"
 
         android:typeface="monospace"
-        android:textSize="20sp"
+        android:textSize="@dimen/character_name_size"
         android:textStyle="bold|italic"
-        android:textColor="#00afc8"
-        android:shadowDy="4"
-        android:shadowRadius="10"
-        android:shadowColor="#6fe555"
-        android:letterSpacing="0.15"/>
+        android:textColor="@color/bluer"
+        android:shadowDy="@dimen/shadow_dy"
+        android:shadowRadius="@dimen/shadow_radius"
+        android:shadowColor="@color/green"
+        android:letterSpacing="@dimen/letter_spacing"/>
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
