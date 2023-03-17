@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="zero">0dp</dimen>
+    <dimen name="header_of_column">5dp</dimen>
+    <dimen name="standart_size_os_text">16sp</dimen>
+    <dimen name="picture_size">90dp</dimen>
+    <dimen name="upper_indentation">6dp</dimen>
+    <dimen name="start_indentation">16dp</dimen>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+
+
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
+
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@color/white</item>
+        <item name="background">@color/white</item>
+
+
+    </style>
+
+ 
+</resources>

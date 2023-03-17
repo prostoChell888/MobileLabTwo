@@ -10,11 +10,14 @@ import com.example.lab2.R;
 import com.example.lab2.adapters.EpisodeAdapter;
 import com.example.lab2.dao.EpisodesDao;
 
+import java.util.Objects;
+
 public class ViewEpisodeActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_episode);
+
 
         Bundle myBundle = getIntent().getExtras();
         int[] stringArray = myBundle.getIntArray("numOfEpisodes");
@@ -23,10 +26,12 @@ public class ViewEpisodeActivity extends AppCompatActivity  {
 
         EpisodesDao episodesInfo = new EpisodesDao();
 
-
         EpisodeAdapter adapter = new EpisodeAdapter(this, episodesInfo.get(stringArray));
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+
     }
 
 

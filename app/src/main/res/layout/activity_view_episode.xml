@@ -7,7 +7,7 @@
 
         <LinearLayout
             android:id="@+id/header"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/zero"
             android:layout_height="wrap_content"
             android:weightSum="10"
 
@@ -16,47 +16,54 @@
             app:layout_constraintBottom_toTopOf="@+id/thecondRecyclerView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/header_color"
+            >
                 <TextView
                     android:id="@+id/id_of_episode"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/zero"
                     android:layout_height="wrap_content"
 
                     android:layout_gravity="center"
-                    android:padding="5dp"
+                    android:padding="@dimen/header_of_column"
 
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="@dimen/start_indentation"
+                    android:layout_marginTop="@dimen/upper_indentation"
                     android:layout_weight="3"
 
-                    android:text="Дата выхода"
+                    android:text="@string/date_of_realese"
 
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="@dimen/standart_size_os_text"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/name_of_episode"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/zero"
                     android:layout_height="wrap_content"
 
                     android:layout_gravity="center"
                     android:padding="5.5dp"
 
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/upper_indentation"
                     android:layout_weight="5"
-                    android:text="Название эпизода"
+                    android:text="@string/title"
 
                     app:layout_constraintEnd_toStartOf="@+id/date_of_relise"
                     app:layout_constraintStart_toEndOf="@+id/id_of_episode"
 
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="@dimen/standart_size_os_text"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
 
                 <TextView
                     android:id="@+id/date_of_relise"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/zero"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/upper_indentation"
 
                     android:layout_gravity="center"
                     android:padding="5dp"
@@ -64,14 +71,17 @@
                     android:layout_marginEnd="1dp"
                     android:layout_weight="1.5"
 
-                    android:text="Серия"
+                    android:text="@string/episode"
                     app:layout_constraintEnd_toEndOf="parent"
 
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="@dimen/standart_size_os_text"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
 
                 <androidx.constraintlayout.widget.Barrier
                     android:id="@+id/barrier"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/zero"
                     android:layout_height="wrap_content"
                     app:barrierDirection="bottom" />
         </LinearLayout>
@@ -80,12 +90,13 @@
             android:id="@+id/thecondRecyclerView"
 
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/zero"
 
             android:layout_below="@id/header"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/header" />
+            app:layout_constraintTop_toBottomOf="@+id/header"
+            android:background="@color/black"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
