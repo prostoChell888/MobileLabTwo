@@ -26,7 +26,7 @@ public class ViewEpisodeActivity extends AppCompatActivity  {
 
         EpisodesDao episodesInfo = new EpisodesDao();
 
-        EpisodeAdapter adapter = new EpisodeAdapter(this, episodesInfo.get(stringArray));
+        EpisodeAdapter adapter = new EpisodeAdapter( episodesInfo.get(stringArray));
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

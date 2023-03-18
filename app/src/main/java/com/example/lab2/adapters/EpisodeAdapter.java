@@ -16,19 +16,19 @@ import java.util.List;
 
 public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeHolder> {
 
-    private final Context context;
+
 
     private final List<Episode> episodes;
 
-    public EpisodeAdapter(Context context, List<Episode> episodes) {
-        this.context = context;
+    public EpisodeAdapter( List<Episode> episodes) {
+
         this.episodes = episodes;
     }
 
     @NonNull
     @Override
     public EpisodeAdapter.EpisodeHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(context);
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.item_episode, parent, false);
 
         return new EpisodeAdapter.EpisodeHolder(view);
@@ -54,9 +54,9 @@ public class EpisodeAdapter extends RecyclerView.Adapter<EpisodeAdapter.EpisodeH
 
         public EpisodeHolder(@NonNull View itemView) {
             super(itemView);
+
             numOfEpisode = itemView.findViewById(R.id.id_of_episode);
             nameOfEpisode = itemView.findViewById(R.id.name_of_episode);
-
             dateRealiseOfEpisode = itemView.findViewById(R.id.date_of_relise);
 
         }

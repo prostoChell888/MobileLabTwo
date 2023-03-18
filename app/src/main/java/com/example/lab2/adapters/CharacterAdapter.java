@@ -17,22 +17,22 @@ import com.example.lab2.dao.CharactersDao;
 
 
 public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.CharapterHolder> {
-    private final Context context;
+
     private final CharactersDao characters;
 
 
-    public CharacterAdapter(Context context, CharactersDao characters, RecycleViewInterface recycleViewInterface) {
-        this.context = context;
+    public CharacterAdapter( CharactersDao characters) {
+
         this.characters = characters;
     }
 
     @NonNull
     @Override
     public CharapterHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(context);
+        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.item_character, parent, false);
 
-        return new CharapterHolder(view, (RecycleViewInterface) context);
+        return new CharapterHolder(view, (RecycleViewInterface) parent.getContext());
     }
 
     @Override

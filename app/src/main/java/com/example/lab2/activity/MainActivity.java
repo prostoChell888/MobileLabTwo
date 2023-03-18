@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity  implements RecycleViewInter
 
         CharactersDao characterInfos = new CharactersDao();
 
-        CharacterAdapter adapter = new CharacterAdapter(this, characterInfos, this);
+        CharacterAdapter adapter = new CharacterAdapter(characterInfos);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
