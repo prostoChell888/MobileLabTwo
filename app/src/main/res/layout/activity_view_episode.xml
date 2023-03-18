@@ -45,7 +45,7 @@
                     android:layout_height="wrap_content"
 
                     android:layout_gravity="center"
-                    android:padding="@dimen/pading_of_center_heder"
+                    android:padding="5.5dp"
 
                     android:layout_marginTop="@dimen/upper_indentation"
                     android:layout_weight="5"
@@ -66,9 +66,9 @@
                     android:layout_marginTop="@dimen/upper_indentation"
 
                     android:layout_gravity="center"
-                    android:padding="@dimen/padding_of_end_header"
+                    android:padding="5dp"
 
-                    android:layout_marginEnd="@dimen/margin_end_of_end_header"
+                    android:layout_marginEnd="1dp"
                     android:layout_weight="1.5"
 
                     android:text="@string/episode"
