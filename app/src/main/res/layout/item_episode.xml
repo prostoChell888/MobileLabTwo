@@ -11,7 +11,7 @@
 
 
     <TextView
-        android:id="@+id/id_of_episode"
+        android:id="@+id/date_of_relise"
         android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:text="@string/date_of_realese"
@@ -45,9 +45,9 @@
 
         android:layout_marginTop="5.3dp"
         android:text="@string/title"
-        app:layout_constraintEnd_toStartOf="@+id/date_of_relise"
+        app:layout_constraintEnd_toStartOf="@+id/id_of_episode"
 
-        app:layout_constraintStart_toEndOf="@+id/id_of_episode"
+        app:layout_constraintStart_toEndOf="@+id/date_of_relise"
         app:layout_constraintTop_toTopOf="parent"
 
         android:layout_weight="5"
@@ -62,7 +62,7 @@
         android:letterSpacing="0.15"/>
 
     <TextView
-        android:id="@+id/date_of_relise"
+        android:id="@+id/id_of_episode"
         android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/upper_indentation"

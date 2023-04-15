@@ -1,22 +1,18 @@
-package com.example.lab2.model;
+package com.example.lab2.dto;
 
 
-public class CharacterInfo {
+public class PersonageDto {
     private final int id;
     private final String name;
-    private final int image;
+    private final String image;
+    private final String[] episode;
 
-    private final int[] episode;
-
-    public CharacterInfo(int id, String name, int image, int[] episode) {
+    public PersonageDto(int id, String name, String image, String[] episode) {
         this.id = id;
         this.name = name;
         this.image = image;
         this.episode = episode;
     }
-
-    //    List<Episode> episodes;
-
 
     public int getId() {
         return id;
@@ -26,11 +22,11 @@ public class CharacterInfo {
         return name;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public int[] getEpisods() {
+    public String[] getEpisods() {
         return episode;
     }
 }

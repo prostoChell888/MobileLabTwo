@@ -11,47 +11,60 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.lab2.R;
-import com.example.lab2.RecycleViewInterface;
-import com.example.lab2.dao.CharactersDao;
+
+import com.example.lab2.dto.PersonageDto;
+import com.example.lab2.util.RecycleViewInterface;
+
+import java.util.List;
 
 
-public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.CharapterHolder> {
+public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.CharacterHolder> {
+    private final Context context;
+    private  List<PersonageDto> personage;
 
-    private final CharactersDao characters;
+    public void setCharacters(List<PersonageDto> personage) {
+        this.personage = personage;
+        notifyDataSetChanged();
+    }
 
-
-    public CharacterAdapter( CharactersDao characters) {
-
-        this.characters = characters;
+    public CharacterAdapter(Context context, List<PersonageDto> personage) {
+        this.context = context;
+        this.personage = personage;
     }
 
     @NonNull
     @Override
-    public CharapterHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+    public CharacterHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.item_character, parent, false);
 
-        return new CharapterHolder(view, (RecycleViewInterface) parent.getContext());
+        return new CharacterHolder(view, (RecycleViewInterface) context);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CharapterHolder holder, int position) {
-        holder.name.setText(characters.get(position).getName());
-        holder.avatar.setImageResource(characters.get(position).getImage());
+    public void onBindViewHolder(@NonNull CharacterHolder holder, int position) {
+        PersonageDto personageDto = personage.get(position);
+
+        holder.name.setText(personageDto.getName());
+
+        Glide.with(context).load(personageDto.getImage())
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(holder.avatar);
     }
 
     @Override
     public int getItemCount() {
-        return characters.getAll().size();
+        return personage.size();
     }
 
-    public static class CharapterHolder extends RecyclerView.ViewHolder {
-
+    public static class CharacterHolder extends RecyclerView.ViewHolder {
         ImageView avatar;
         TextView name;
 
-        public CharapterHolder(@NonNull View itemView, RecycleViewInterface recycleViewInterface) {
+        public CharacterHolder(@NonNull View itemView, RecycleViewInterface recycleViewInterface) {
             super(itemView);
 
             avatar = itemView.findViewById(R.id.photo_of_character);
@@ -61,7 +74,6 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION) {
                     recycleViewInterface.onItemClick(pos);
-
                 }
             });
         }

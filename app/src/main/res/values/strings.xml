@@ -3,4 +3,6 @@
     <string name="date_of_realese">Дата выхода</string>
     <string name="title">Название эпизода</string>
     <string name="episode">Серия</string>
+    <string name="unnown_name">имя неизвестно</string>
+
 </resources>

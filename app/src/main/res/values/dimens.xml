@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-
     <dimen name="zero">0dp</dimen>
     <dimen name="header_of_column">5dp</dimen>
     <dimen name="standart_size_os_text">16sp</dimen>
     <dimen name="picture_size">90dp</dimen>
     <dimen name="upper_indentation">6dp</dimen>
     <dimen name="start_indentation">16dp</dimen>
+    <dimen name="pading_of_center_heder">5.5dp</dimen>
+    <dimen name="padding_of_end_header">5dp</dimen>
+    <dimen name="margin_end_of_end_header">1dp</dimen>
+    <dimen name="padding_of_end_content">3dp</dimen>
+    <dimen name="margine_end_of_end_column">1dp</dimen>
+    <dimen name="character_name_size">20sp</dimen>
+    <dimen name="shadow_dy">4</dimen>
+    <dimen name="shadow_radius">4</dimen>
+    <dimen name="letter_spacing">0.15</dimen>
 </resources>
