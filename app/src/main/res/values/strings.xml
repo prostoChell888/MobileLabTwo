@@ -4,5 +4,7 @@
     <string name="title">Название эпизода</string>
     <string name="episode">Серия</string>
     <string name="unnown_name">имя неизвестно</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

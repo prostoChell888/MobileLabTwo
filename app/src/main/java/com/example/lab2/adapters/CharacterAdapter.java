@@ -60,7 +60,7 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
         return personage.size();
     }
 
-    public static class CharacterHolder extends RecyclerView.ViewHolder {
+    public  class CharacterHolder extends RecyclerView.ViewHolder {
         ImageView avatar;
         TextView name;
 
@@ -73,7 +73,8 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
             itemView.setOnClickListener(view -> {
                 int pos = getAdapterPosition();
                 if (pos != RecyclerView.NO_POSITION) {
-                    recycleViewInterface.onItemClick(pos);
+                    String[] episodes = personage.get(pos).getEpisods();
+                    recycleViewInterface.onItemClick(episodes);
                 }
             });
         }
