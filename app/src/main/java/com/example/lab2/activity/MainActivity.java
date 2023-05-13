@@ -1,15 +1,11 @@
 package com.example.lab2.activity;
 
 
-
-
-
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 
 
 import androidx.fragment.app.Fragment;
@@ -23,23 +19,17 @@ import com.example.lab2.util.RecycleViewInterface;
 
 public class MainActivity extends AppCompatActivity implements RecycleViewInterface {
 
-
-
-
+    Fragment fragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Fragment fragment  = PersonageFragment.newInstance();
+        if (fragment == null) fragment = PersonageFragment.newInstance();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(R.id.frame_container, fragment, "main_fragment");
         transaction.commit();
     }
-
-
-
 
     @Override
     public void onItemClick(String[] episodes) {

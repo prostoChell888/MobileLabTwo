@@ -41,7 +41,12 @@ public class CharacterAdapter extends RecyclerView.Adapter<CharacterAdapter.Char
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.item_character, parent, false);
 
-        return new CharacterHolder(view, (RecycleViewInterface) context);
+        try {
+            return new CharacterHolder(view, (RecycleViewInterface) context);
+        } catch  (ClassCastException e) {
+            throw new ClassCastException(context.toString() + " must implement " +
+                    "OnArticleSelectedListener");
+        }
     }
 
     @Override
