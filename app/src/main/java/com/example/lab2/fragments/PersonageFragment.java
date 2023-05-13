@@ -50,16 +50,13 @@ public class PersonageFragment extends Fragment  {
     }
 
     public static PersonageFragment newInstance() {
-        PersonageFragment fragment = new PersonageFragment();
-
-        return fragment;
+        return new PersonageFragment();
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = new ViewModelProvider(this).get(PersonageViewModel.class);
-
     }
 
     @Override
@@ -83,7 +80,7 @@ public class PersonageFragment extends Fragment  {
                     List<PersonageDto> personageDtos = modelToDto(personage);
                     allPersonageDtos = personageDtos;
                     adapter.setCharacters(personageDtos);
-//                viewModel.setNextPage(personage.size() / 20 + 1);
+//  удалено         viewModel.setNextPage(personage.size() / 20 + 1);
                 }
             });
         }
@@ -106,14 +103,13 @@ public class PersonageFragment extends Fragment  {
                                     List<PersonageDto> personageDtos = modelToDto(personage);
                                     allPersonageDtos = personageDtos;
                                     adapter.setCharacters(personageDtos);
-//                                    viewModel.setNextPage(personage.size() / 20 + 1);
+//                удалено                    viewModel.setNextPage(personage.size() / 20 + 1);
                                 }
                             });
                     progressBar.setVisibility(View.GONE);
                 }
             }
         });
-
 
         return view;
     }

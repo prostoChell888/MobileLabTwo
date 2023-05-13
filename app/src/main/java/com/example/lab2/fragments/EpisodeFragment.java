@@ -47,8 +47,8 @@ public class EpisodeFragment extends Fragment  {
         EpisodeFragment fragment = new EpisodeFragment();
         Bundle args = new Bundle();
         args.putStringArray(ARG_PARAM1, numOfEpisodesArr);
-
         fragment.setArguments(args);
+
         return fragment;
     }
 

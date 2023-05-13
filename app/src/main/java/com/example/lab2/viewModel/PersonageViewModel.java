@@ -33,8 +33,6 @@ public class PersonageViewModel extends AndroidViewModel {
 
     private final AppDao appDao;
 
-
-
     public PersonageViewModel(@NonNull Application application) {
         super(application);
         appDao = DataBase.getInstance(application).PersonageDao();
@@ -103,7 +101,7 @@ public class PersonageViewModel extends AndroidViewModel {
         @Override
         public Void doInBackground(MutableLiveData<List<Personage>>... personages) {
             allPersonageDtos = appDao.getAll();
-            nextPage = (allPersonageDtos.size() / 20 + 1) + "";
+            nextPage = (allPersonageDtos.size() / 20 + 1) + "";//добавлено
             personages[0].postValue(allPersonageDtos);
 
             return null;
